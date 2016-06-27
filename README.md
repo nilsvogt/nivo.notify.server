@@ -4,14 +4,14 @@ This is how I set up a LEMP-Stack on a virtual machine for sandbox projects. The
 
 # Setup
 
-1. create a entry in your hosts file
+create an entry in your hosts file
 
-> 111.111.11.11 dev.local
+> 111.111.11.11	dev.local
 
-2. run `vagrant up` to build up a LEMP stack 
+run `vagrant up` to build up a LEMP stack 
 
 The vagrant box is now setting up the environment with the ip *111.111.11.11*
-If not found the bootstrap.sh creates the public root for your application.
+If not found the bootstrap.sh creates the public root for your application:
 
 > app/public
 
@@ -19,23 +19,24 @@ and places an index.php outputting `phpinfo()` to demonstrate php is up and runn
 
 ## Change the document root
 
-You can simply assign an other document root by changing the corresponding line in ./box-settings/bootstrap.sh:
-document_root="/vagrant/app/public"
+You can simply assign another document root by changing the corresponding line in ./box-settings/bootstrap.sh:
 
-# Connect with HeidiSQL via SSH-Tunnel to the running vagrant box
+> document_root="/vagrant/app/public"
+
+# Connect with HeidiSQL 
 
 Settings
 ---------
-Type: MySQL (SSH tunnel)
-Hostname/IP: localhost
-User: root
-Pass: root
-Port: 3306
+- Type: `MySQL (SSH tunnel)`
+- Hostname/IP: `localhost`
+- User: `root`
+- Pass: `root`
+- Port: `3306`
 
 SSH Tunnel
 ----------
-plink.exe :selected
-SSH Host: 111.111.11.11
-Port: 0
-User: vagrant
-Pass: vagrant
+- plink.exe :selected
+- SSH Host: `111.111.11.11`
+- Port: `0`
+- User: `vagrant`
+- Pass: `vagrant`
