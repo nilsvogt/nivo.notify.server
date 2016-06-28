@@ -1,4 +1,4 @@
-# Setting up a LEMP stack on a virtual machine using Vagrant
+# LEMP stack on a virtual machine using Vagrant
 
 This is how I set up a LEMP-Stack on a virtual machine for sandbox projects. The Vagrantfile comes with a bootstrap.sh setting up everything you need on a virtual machine. Feel free to customize the bootstrapping to fit your needs.
 
