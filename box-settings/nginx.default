@@ -10,8 +10,8 @@ server {
 
   location / {
     # First attempt to serve request as file, then
-    # as directory, then fall back to index.html
-    try_files $uri $uri/ /index.html;
+    # as directory, then fall back to index.php
+    try_files $uri $uri/ /index.php;
   }
 
   location /doc/ {
