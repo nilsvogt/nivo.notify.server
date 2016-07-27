@@ -1,14 +1,14 @@
 # LEMP stack on a virtual machine using Vagrant
 
-This is how I set up a LEMP-Stack on a virtual machine for sandbox projects. The Vagrantfile comes with a bootstrap.sh setting up everything you need on a virtual machine. Feel free to customize the bootstrapping to fit your needs.
+This is how I set up a LEMP-Stack on a virtual machine for sandboxed projects. The Vagrantfile comes with a bootstrap.sh setting up everything you need on a virtual machine. Feel free to customize the bootstrapping to fit your needs.
 
 # Setup
 
-create an entry in your hosts file
+create an entry in your hosts file (optional)
 
 > 111.111.11.11	dev.local
 
-run `vagrant up` 
+run `vagrant up`
 
 The vagrant box is now setting up the environment with the ip *111.111.11.11*
 If not found the bootstrap.sh creates the public root for your application:
@@ -23,7 +23,7 @@ You can simply assign another document root by changing the corresponding line i
 
 > document_root="/vagrant/app/public"
 
-# Connect with HeidiSQL 
+# Connect with HeidiSQL
 
 Settings
 ---------
@@ -40,3 +40,16 @@ SSH Tunnel
 - Port: `0`
 - User: `vagrant`
 - Pass: `vagrant`
+
+# Debug with PHPStorm and XDebug
+
+- "select run/Debug configuration"
+- "edit configuration"
+- (+) "PHP Remote Debgug"
+- "IDE-KEY": `PHPSTORM`
+- Server Configuration:
+  - `127.0.0.1:8080`
+  - XDebug
+  - map "Project files" root to "/vagrant"
+
+Start debugging session in PHPStorm and your Browser
