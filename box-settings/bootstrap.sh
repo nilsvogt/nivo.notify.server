@@ -1,12 +1,9 @@
 #! /usr/bin/env bash
 
-# assign the root directory of your server
-document_root="/vagrant/app/public"
-# set the database user
-db_username="root"
-# set the database pass
-db_password="root"
+# include config
+source /vagrant/box-settings/config.sh
 
+# prints a decorated section with passed message
 function echoSection {
 	tput setaf 5
 	echo " "
@@ -41,8 +38,8 @@ sudo cp /vagrant/box-settings/nginx.default /etc/nginx/sites-available/default &
 # link document root
 #
 if ! [ -L /usr/share/nginx/html ]; then
-  rm -rf /usr/share/nginx/html &&
-  ln -fs ${document_root} /usr/share/nginx/html
+	rm -rf /usr/share/nginx/html &&
+	ln -fs ${document_root} /usr/share/nginx/html
 fi
 
 # install php7 stack
@@ -72,7 +69,7 @@ sudo apt-get install -y mysql-client >/dev/null &&
 # install phpunit
 #
 echoSection "> installing phpunit..." &&
-wget https://phar.phpunit.de/phpunit.phar &&
+wget https://phar.phpunit.de/phpunit.phar --nv &&
 chmod +x phpunit.phar &&
 sudo mv phpunit.phar /usr/local/bin/phpunit &&
 
@@ -105,6 +102,6 @@ fi
 
 # restart server
 #
-echoSection "> restarting php-fqm and nginx..." &&
+echoSection "> restarting php-fpm and nginx..." &&
 sudo service php7.0-fpm restart &&
 sudo service nginx restart

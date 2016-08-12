@@ -2,9 +2,9 @@
 
 This is how I set up a LEMP-Stack on a virtual machine for sandboxed projects. The Vagrantfile comes with a bootstrap.sh setting up everything you need on a virtual machine. Feel free to customize the bootstrapping to fit your needs.
 
-## The setup installs and configures the tools below
+## The setup installs and configures the tools below on a virtual ubuntu machine
 
-- curl, uip, unzip
+- curl, zip, unzip
 - nginx
 - php7
 - mysql
@@ -13,9 +13,18 @@ This is how I set up a LEMP-Stack on a virtual machine for sandboxed projects. T
 - git
 - composer
 
-After setup successfully the `bootstrap.sql` will be passed to mysql so thats a handy place to put a database dump in. Anyway, since this is optional you simply can remove this file.
+After successfully setup, the `bootstrap.sql` will be passed to mysql so thats a handy place to put a database dump in. Anyway, since this is optional you simply can remove this file.
 
 # Setup
+
+customize the bootstrap configuration in `box-settings/config.sh` (optional)
+
+assign the root directory of your server:
+> document_root="/vagrant/app/public"
+set the database user:
+> db_username="root"
+set the database pass:
+> db_password="root"
 
 create an entry in your hosts file (optional)
 
