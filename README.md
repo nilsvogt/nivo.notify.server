@@ -42,12 +42,6 @@ If not found the bootstrap.sh creates the public root for your application:
 
 and places an index.php outputting `phpinfo()` to demonstrate php is up and running.
 
-## Change the document root
-
-You can simply assign another document root by changing the corresponding line in ./box-settings/bootstrap.sh:
-
-> document_root="/vagrant/app/public"
-
 # Connect with HeidiSQL
 
 Settings
@@ -77,4 +71,4 @@ SSH Tunnel
   - XDebug
   - map "Project files" root to "/vagrant"
 
-Start debugging session in PHPStorm and your Browser
+Start debugging session in PHPStorm and your browser
