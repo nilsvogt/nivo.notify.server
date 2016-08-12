@@ -13,7 +13,7 @@ This is how I set up a LEMP-Stack on a virtual machine for sandboxed projects. T
 - git
 - composer
 
-Once the environment was successfully setup, the `bootstrap.sql` will be processed against mysql so thats a handy place to put a database dump in. Anyway, since this is optional you simply can remove this file if you do not need it.
+Once the environment was successfully set up, the `bootstrap.sql` will be processed against mysql so thats a handy place to put a database dump in. Anyway, since this is optional you simply can remove this file if you do not need it.
 
 # Setup
 
