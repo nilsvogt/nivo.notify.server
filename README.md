@@ -20,10 +20,12 @@ After successfully setup of the environment, the `bootstrap.sql` will be passed 
 customize the bootstrap configuration in `box-settings/config.sh` (optional)
 
 assign the root directory of your server:
-> document_root="/vagrant/app/public"  
-set the database user:  
-> db_username="root"  
-set the database pass:  
+> document_root="/vagrant/app/public"
+
+set the database user:
+> db_username="root"
+
+set the database pass:
 > db_password="root"
 
 create an entry in your hosts file (optional)
