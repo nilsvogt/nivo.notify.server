@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 
 # include config
+#
+dos2unix /vagrant/box-settings/config.sh #get rid of messed up line-endings
 source /vagrant/box-settings/config.sh
 
 # prints a decorated section with passed message
