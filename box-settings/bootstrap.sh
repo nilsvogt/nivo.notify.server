@@ -84,7 +84,7 @@ sudo apt-get install -y git >/dev/null &&
 #
 echoSection "> installing composer..." &&
 curl -Ss https://getcomposer.org/installer | php >/dev/null &&
-mv composer.phar /usr/local/bin/composer &&
+sudo mv composer.phar /usr/local/bin/composer &&
 
 # bootstrap the public root
 #
