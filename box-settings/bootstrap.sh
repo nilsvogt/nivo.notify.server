@@ -47,7 +47,7 @@ fi
 # install php7 stack
 #
 echoSection "> installing php7 stack..." &&
-sudo apt-get install -y --force-yes php7.0-fpm php7.0 php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php7.0-imap php7.0-mcrypt php7.0-sqlite3 snmp >/dev/null &&
+sudo apt-get install -y --force-yes php7.0-fpm php7.0 php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php7.0-imap php7.0-mcrypt php7.0-sqlite3 php7.0-mbstring php7.0-bcmath snmp >/dev/null &&
 
 # install xdebug
 #
