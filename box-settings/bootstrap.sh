@@ -61,12 +61,12 @@ sudo bash -c "cat /vagrant/box-settings/xdebug-php.ini >> /etc/php/7.0/fpm/php.i
 echoSection "> installing mysql-server..." &&
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password '${db_username} >/dev/null &&
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password '${db_password} >/dev/null &&
-sudo apt-get -y install mysql-server >/dev/null &&
+sudo apt-get -y install mysql-server-5.6 >/dev/null &&
 
 # install mysql-client
 #
 echoSection "> installing mysql-client..." &&
-sudo apt-get install -y mysql-client >/dev/null &&
+sudo apt-get install -y mysql-client-5.6 >/dev/null &&
 
 # install phpunit
 #
